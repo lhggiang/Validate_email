@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="email" id="email">
+        <button id="btn">Submit</button>
+    </div>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            let value = document.getElementById("email").value;
+            let regex = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+            if (regex.test(value)) alert("Email hợp lệ");
+            else {
+                alert("Email không hợp lệ");
+                alert("Vui lòng nhập lại");
+            }
+        }
+    </script>
+</body>
+
+</html>
